@@ -30,7 +30,7 @@ app.use(cookieParser());
 app.get("*", chekUser);
 app.get("/jwtid", requireAuth, (req, res) => {
   res.status(200).send(res.locals.user.id);
-  console.log("response jwtid", JSON.stringify(res.locals.user));
+  // console.log("response jwtid", JSON.stringify(res.locals.user));
 });
 
 // routes

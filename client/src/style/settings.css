@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+*::selection {
+  background: #4a90e2; /* Bleu roi */
+}
+
+a,
+a:visited {
+  color: #4a90e2; /* Bleu roi */
+}
+
+input,
+textarea {
+  resize: none;
+  border-radius: 20px;
+  width: 270px;
+  font-family: Arial, sans-serif; /* Police par défaut */
+  background: #fff; /* Blanc */
+}
+
+textarea:focus {
+  box-shadow: 0 0 4px rgba(0, 22, 44, 0.1);
+}
+
+button,
+input[type="submit"] {
+  background: #4a90e2; /* Bleu roi */
+  color: #fff; /* Blanc */
+  font-family: Arial, sans-serif; /* Police par défaut */
+  cursor: pointer;
+  transition: 0.2s;
+  margin: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  border-radius: 20px 6px 20px 20px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background: #fff; /* Blanc */
+  color: #4a90e2; /* Bleu roi */
+}
+
+input[type="checkbox"] {
+  box-shadow: none;
+  width: 20px;
+  margin: 10px 0;
+}
+
+i {
+  transition: 0.15s;
+}
+
+i:hover {
+  transform: scale(1.1);
+}
+
+body {
+  font-family: Arial, sans-serif; /* Police par défaut */
+  line-height: 1.4rem;
+  background: #fff; /* Blanc */
+  color: #4a90e2; /* Bleu roi */
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}

@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import Routes from "./components/Routes";
 import { UidContext } from "./components/AppContext";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { fetchCurrentUser } from "./app/slices/userSlice";
 
 function App() {
   const [uid, setUid] = useState(null);
+  const dispatch = useDispatch();
   useEffect(() => {
     const fetchToken = async () => {
       await axios
@@ -12,12 +15,13 @@ function App() {
           withCredentials: true,
         })
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           setUid(res.data);
         })
         .catch((err) => console.log(err));
     };
     fetchToken();
+    if (uid) dispatch(fetchCurrentUser(uid));
   }, [uid]);
 
   return (

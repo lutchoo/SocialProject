@@ -1,0 +1,26 @@
+.profil-page h1 {
+  text-align: center;
+  padding: 50px 50px;
+}
+.profil-container {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.update-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.log-container {
+  display: flex;
+  grid-template-columns: 50% 50%;
+}
+.connection-from {
+  width: 400px;
+  margin: 35px auto 0;
+  padding: 20px 0;
+  user-select: none;
+  text-align: center;
+}

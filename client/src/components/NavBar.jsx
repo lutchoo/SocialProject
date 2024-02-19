@@ -2,10 +2,13 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { UidContext } from "../components/AppContext";
 import Logout from "./Log/Logout";
+import { useSelector } from "react-redux";
+import "../style/navBar.css";
 
 function NavBar() {
   const uid = useContext(UidContext);
-
+  const userData = useSelector((state) => state.currentUser.user);
+  // if (userData) console.log(userData.pseudo);
   return (
     <nav>
       <div className="nav-container">
@@ -21,7 +24,7 @@ function NavBar() {
             <li></li>
             <li className="welcome">
               <NavLink to="/profil">
-                <h5>Bienvenue ??????</h5>
+                {userData && <h5>Bienvenue {userData.pseudo}</h5>}
               </NavLink>
             </li>
             <Logout />

@@ -1,0 +1,71 @@
+.left-nav-container {
+  position: relative;
+}
+.left-part {
+  background-color: bisque;
+}
+.right_part {
+  background-color: bisque;
+}
+.icons {
+  position: fixed;
+  z-index: 10;
+}
+.icons-bis a {
+  transition: 0.1s;
+  display: inline-block;
+  padding-bottom: 100px;
+  padding-left: 25px;
+}
+
+.icons-bis a:before {
+  transition: 0.15s ease;
+  transform: scale(0);
+  transform-origin: center;
+  z-index: -10;
+  content: "";
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  background: blue;
+  border-radius: 50px;
+}
+.icons-bis a::before {
+  transition: 0.15s ease;
+  transform: scale(0);
+  transform-origin: center;
+  z-index: -10;
+  content: "";
+  height: 45px;
+  width: 45px;
+  position: absolute;
+  background: blue;
+  border-radius: 50px;
+}
+.icons-bis a:hover {
+  transform: scale(1.02);
+}
+.icons-bis a:hover::before {
+  transform: scale(1);
+}
+.active-left-nav {
+  position: relative;
+}
+.active-left-nav::after {
+  content: "";
+  height: 40px;
+  width: 5px;
+  position: absolute;
+  background: #4a90e2; /* Bleu roi */
+  left: -7px;
+  bottom: 8px;
+  border-radius: 40px;
+  transform: scaleY(0);
+  animation: scale 1.5s ease forwards;
+}
+
+@keyframes scale {
+  to {
+    transform: scaleY(1);
+  }
+}

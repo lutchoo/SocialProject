@@ -17,7 +17,7 @@ function Log(props) {
   return (
     <div className="connection-form">
       <div className="form-container">
-        <ul>
+        <ul className="ul-form">
           <li onClick={handleModals} id="register">
             S'inscrire
           </li>
