@@ -5,6 +5,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { fetchCurrentUser } from "./app/slices/userSlice";
 
+
 function App() {
   const [uid, setUid] = useState(null);
   const dispatch = useDispatch();
@@ -21,8 +22,8 @@ function App() {
         .catch((err) => console.log(err));
     };
     fetchToken();
-    if (uid) dispatch(fetchCurrentUser(uid));
-  }, [uid]);
+    if(uid) dispatch(fetchCurrentUser(uid))
+  }, [uid, dispatch]);
 
   return (
     <UidContext.Provider value={uid}>

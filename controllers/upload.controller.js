@@ -15,7 +15,13 @@ module.exports.uploadProfil = async (req, res) => {
     if (req.file.size > 500000) throw Error("max size");
 
     const fileName = req.body.name + ".jpg";
+//     const fileName = req.body.file.name;
+//     const parts = fileName.split('.');
+//     const extension = parts[parts.length - 1];
 
+// // Création du nom de fichier final avec l'extension modifiée
+//     const finalName = req.body.name + "." + extension;
+  
     // Enregistrement du fichier sur le serveur
     await pipeline(
       req.file.stream,

@@ -1,26 +1,78 @@
-.profil-page h1 {
+.profil-page , h1 {
   text-align: center;
-  padding: 50px 50px;
+  margin: 70px 50px;
 }
-.profil-container {
+
+.log-container{
   display: grid;
-  grid-template-columns: 10% 90%;
-}
-.update-container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: 90%;
+  grid-template-columns: 35% 65%;
+  width: 80%;
   margin: 0 auto;
-  padding-top: 100px;
 }
-.log-container {
+.form-container{
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.update-container{
+  display: grid;
   grid-template-columns: 50% 50%;
 }
-.connection-from {
-  width: 400px;
-  margin: 35px auto 0;
-  padding: 20px 0;
-  user-select: none;
-  text-align: center;
+.left-part{
+  margin: 5px;
+}
+.left-part img{
+  width: 450px;
+  height: 300px;
+  border-radius: 20%;
+}
+.upload-pic > input{
+  margin: 20px;
+}
+.right_part{
+  margin: 5px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.bio-update{
+
+}
+.popup-profil-container {
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  position: fixed;
+  animation: popup 1s forwards;
+}
+@keyframes popup {
+  to {
+    backdrop-filter: blur(2px);
+  }
+}
+.popup-profil-container img{
+  width: 50px;
+  border-radius: 100%;
+
+}
+.modal {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-100%);
+  background: blue;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 0 2px rgba(131, 130, 130, 0.356);
+  overflow: auto;
+  transform: scaleY(0);
+  transform-origin: center;
+  animation: modal .5s forwards;
+}
+@keyframes modal {
+  to {
+    transform: scale(1) translate(-50%);
+  }
 }
